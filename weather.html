@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather Forecasting Login</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div id="login-container">
+        <h2>Weather Forecasting Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="validateLogin()">Login</button>
+            <button type="button" onclick="redirectToSignUp()">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Both username and password are required!");
+            } else {
+                // You can add additional authentication logic here.
+                // For simplicity, let's just show an alert for successful login.
+                alert("Login successful! Redirecting to the weather page...");
+                // You can add code here to redirect the user to the weather page.
+            }
+        }
+
+        function redirectToSignUp() {
+            // You can add code here to redirect the user to the sign-up page.
+            alert("Redirecting to Sign Up page...");
+            window.location.href = "signup.html";
+        }
+    </script>
+</body>
+</html>
